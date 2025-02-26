@@ -3,7 +3,6 @@ import { createAssistant } from "./openai/createAssistant";
 import { createThread } from "./openai/createThread";
 import { createRun } from "./openai/createRun";
 import { perfromRun } from "./openai/performRun";
-import cli from "@angular/cli";
 
 async function main() {
     const client = new OpenAI();

@@ -37,6 +37,8 @@ export async function handleRunToolCalls(run: Run, client: OpenAI, thread: Threa
     if (validOutputs.length === 0) return run;
 
     return client.beta.threads.runs.submitToolOutputsAndPoll(
-
+        thread.id,
+        run.id,
+        { tool_outputs: validOutputs }
     );
 }

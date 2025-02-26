@@ -1,7 +1,8 @@
 import OpenAI from "openai";
+import "dotenv/config";
 import { Thread } from "openai/resources/beta/threads/threads";
 import { Run } from "openai/resources/beta/threads/runs/runs";
-import { handleRunToolCalls } from "./handleRunToolCalls.js";
+import { handleRunToolCalls } from "./handleRunToolCall.js";
 
 export async function perfromRun(run: Run, client: OpenAI, thread: Thread) {
     while (run.status === 'requires_action') {
