@@ -4,7 +4,7 @@ import { Thread } from "openai/resources/beta/threads/threads";
 import { Run } from "openai/resources/beta/threads/runs/runs";
 import { handleRunToolCalls } from "./handleRunToolCall.js";
 
-export async function perfromRun(run: Run, client: OpenAI, thread: Thread) {
+export async function performRun(run: Run, client: OpenAI, thread: Thread) {
     while (run.status === 'requires_action') {
         run = await handleRunToolCalls(run, client, thread);
     }
