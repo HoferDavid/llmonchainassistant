@@ -15,5 +15,5 @@ export interface ToolConfig<T = any> {
 }
 
 export const tools: Record<string, ToolConfig> = {
-    // ass more tools here
+    // add more tools here
 };
