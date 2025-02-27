@@ -6,7 +6,7 @@ import { perfromRun } from "./openai/performRun";
 
 async function main() {
     const client = new OpenAI();
-    const message = "hey alt, what is your wallet's balance?"
+    const message = "Send 0.0001 ETH to 0x000000000000000000000000000000000000000";
 
     const assistant = await createAssistant(client);
     const thread = await createThread(client, message);
